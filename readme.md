@@ -4,12 +4,13 @@ The library contains only types, program behavior should be set manually.
 
 ## adding new packet type
 There are 2 auxiliary classes that encode values in VISCA packets
-* Pack <N> - specifies a byte that is encoded as 0xNq where q is the payload and N is a constant
-* PackByte - specifies an auxiliary type, which is useful when parsing a protocol by byte-by-byte, inherited from Pack
-* Packed<N> - specifies a sequence of N bytes that are encoded as 0x0q 0x0q 0x0q 0x0q 0x0q, where q is a number encoded in Big Endian
+	* Pack <N> - specifies a byte that is encoded as 0xNq where q is the payload and N is a constant
+	* PackByte - specifies an auxiliary type, which is useful when parsing a protocol by byte-by-byte, inherited from Pack
+	* Packed<N> - specifies a sequence of N bytes that are encoded as 0x0q 0x0q 0x0q 0x0q 0x0q, where q is a number encoded in Big Endian
+
 There are also 2 classes that define specific fields for the VISCA package
-  * Address - encodes the address of the packet
-  * Terminator - encodes the byte-terminator of a packet
+	* Address - encodes the address of the packet
+	* Terminator - encodes the byte-terminator of a packet
 ## example (fixed it, plz, ilb lazy)
 <code>
 Here is an example of an ACK command, which is encoded as follows
